@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 import pandas as pd
 import pickle
 
@@ -9,7 +9,22 @@ import pickle
 # --------------------
 app = FastAPI(
     title="Shop Sales Prediction API",
-    version="1.0"
+    description="""
+Predict daily shop sales using an XGBoost model trained on historical retail data.
+
+Features include:
+
+- Store ID
+- Day of Week
+- Date
+- Number of Customers
+- Promotion
+- State Holiday
+- School Holiday
+
+Returns the predicted sales for the specified day.
+""",
+    version="1.0.0",
 )
 
 
@@ -37,21 +52,21 @@ with open("Final_Model.pkl", "rb") as file:
 # --------------------
 # Input model
 # --------------------
-class ShopInput(BaseModel):
 
-    store_ID: int
-    day_of_week: int
-    date: str
-    nb_customers_on_day: int
-    promotion: int
-    state_holiday: str
-    school_holiday: int
+class ShopInput(BaseModel):
+    store_ID: int = Field(..., example=404)
+    day_of_week: int = Field(..., ge=1, le=7, example=3)
+    date: str = Field(..., example="2014-03-19")
+    nb_customers_on_day: int = Field(..., ge=0, example=657)
+    promotion: int = Field(..., ge=0, le=1, example=1)
+    state_holiday: str = Field(..., example="0")
+    school_holiday: int = Field(..., ge=0, le=1, example=0)
 
 
 # --------------------
 # Home endpoint
 # --------------------
-@app.get("/")
+@app.get("/", tags=["General"])
 def home():
 
     return {
@@ -62,7 +77,7 @@ def home():
 # --------------------
 # Health endpoint
 # --------------------
-@app.get("/health")
+@app.get("/health", tags=["General"])
 def health():
 
     return {
@@ -73,7 +88,7 @@ def health():
 # --------------------
 # Prediction endpoint
 # --------------------
-@app.post("/predict")
+@app.post("/predict", tags=["Prediction"])
 def predict(data: ShopInput):
 
     df = pd.DataFrame([data.model_dump()])
