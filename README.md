@@ -4,11 +4,11 @@ A full-stack Machine Learning web application that predicts daily retail shop sa
 
 **🚀 Live Demo:** https://w2-iron-kaggle-mini-project-pearl.vercel.app
 
-<img src="Vercel_React_20260720.jpg" width="450"></img>
+<img src="./images/Vercel_React_20260720.jpg" width="450"></img>
 
 **📚 API Documentation:** https://w2-ironkaggle-mini-project.onrender.com/docs
 
-<img src="Render_APIdocs_20260720.jpg" width="450"></img>
+<img src="./images/Render_APIdocs_20260720.jpg" width="450"></img>
 
 <br>
 
