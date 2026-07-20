@@ -7,13 +7,13 @@ function PredictionResult({ prediction }) {
   }).format(prediction);
 
   return (
-    <div className="mt-8 bg-green-50 border border-green-200 rounded-xl shadow p-8 text-center">
+    <div className="mt-8 rounded-xl bg-emerald-900/40 border border-emerald-700 shadow-lg p-8 text-center">
 
-      <h2 className="text-xl font-semibold text-gray-700">
+      <h2 className="text-xl font-semibold text-emerald-200">
         Predicted Sales
       </h2>
 
-      <p className="text-5xl font-bold text-green-700 mt-4">
+      <p className="text-5xl font-bold text-emerald-400 mt-4">
         {formatted}
       </p>
 

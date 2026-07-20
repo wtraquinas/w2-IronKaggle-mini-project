@@ -10,3 +10,13 @@ html.dark body {
     background: #0f172a;
     color: white;
 }
+
+select {
+    background-color: #334155;
+    color: white;
+}
+
+select option {
+    background-color: #334155;
+    color: white;
+}

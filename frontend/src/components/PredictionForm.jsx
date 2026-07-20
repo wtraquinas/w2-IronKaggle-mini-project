@@ -46,20 +46,26 @@ function PredictionForm({ onPrediction }) {
     }
   };
 
+    const inputClass =
+        "w-full p-3 rounded-lg border border-slate-600 bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500";
+
+    const labelClass =
+        "block font-semibold mb-2 text-gray-200";
+
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-8">
+    <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg p-8">
 
       <form onSubmit={handleSubmit(onSubmit)}>
 
         {/* Store ID */}
 
-        <label className="block font-semibold mb-2 text-gray-800 dark:text-gray-200">
+        <label className={labelClass}>
           Store ID
         </label>
 
         <input
           type="number"
-          className="w-full border rounded-lg p-3 bg-white dark:bg-slate-700 dark:text-white dark:border-slate-600"
+          className={inputClass}
           {...register("store_ID", { required: true })}
         />
 
@@ -71,13 +77,13 @@ function PredictionForm({ onPrediction }) {
 
         {/* Day */}
 
-        <label className="block font-semibold mb-2">
+        <label className={labelClass}>
           Day of Week
         </label>
 
         <select
-          className="w-full border rounded-lg p-3 mb-4"
-          {...register("day_of_week")}
+          className={inputClass}
+          className={`${inputClass} appearance-none`}
         >
           <option value={1}>Monday</option>
           <option value={2}>Tuesday</option>
@@ -90,13 +96,13 @@ function PredictionForm({ onPrediction }) {
 
         {/* Date */}
 
-        <label className="block font-semibold mb-2">
+        <label className={labelClass}>
           Date
         </label>
 
         <input
           type="date"
-          className="w-full border rounded-lg p-3 mb-4"
+          className={`${inputClass} appearance-none`}
           {...register("date", { required: true })}
         />
 
@@ -108,13 +114,13 @@ function PredictionForm({ onPrediction }) {
 
         {/* Customers */}
 
-        <label className="block font-semibold mb-2">
+        <label className={labelClass}>
           Number of Customers
         </label>
 
         <input
           type="number"
-          className="w-full border rounded-lg p-3 mb-4"
+          className={inputClass}
           {...register("nb_customers_on_day", { required: true })}
         />
 
@@ -126,12 +132,12 @@ function PredictionForm({ onPrediction }) {
 
         {/* Promotion */}
 
-        <label className="block font-semibold mb-2">
+        <label className={labelClass}>
           Promotion
         </label>
 
         <select
-          className="w-full border rounded-lg p-3 mb-4"
+          className={`${inputClass} appearance-none`}
           {...register("promotion")}
         >
           <option value={0}>No</option>
@@ -140,12 +146,12 @@ function PredictionForm({ onPrediction }) {
 
         {/* State Holiday */}
 
-        <label className="block font-semibold mb-2">
+        <label className={labelClass}>
           State Holiday
         </label>
 
         <select
-          className="w-full border rounded-lg p-3 mb-4"
+          className={`${inputClass} appearance-none`}
           {...register("state_holiday")}
         >
           <option value="0">None</option>
@@ -156,14 +162,15 @@ function PredictionForm({ onPrediction }) {
 
         {/* School Holiday */}
 
-        <label className="block font-semibold mb-2">
+        <label className={labelClass}>
           School Holiday
         </label>
 
         <select
-          className="w-full border rounded-lg p-6 mb-6"
+          className={`${inputClass} appearance-none`}
           {...register("school_holiday")}
         >
+        
           <option value={0}>No</option>
           <option value={1}>Yes</option>
         </select>
@@ -175,7 +182,17 @@ function PredictionForm({ onPrediction }) {
 
             <button
               type="submit"
-              className="flex-1 bg-blue-700 hover:bg-blue-800 text-white py-3 rounded-lg font-semibold transition"
+              className="
+                flex-1
+                bg-blue-600
+                hover:bg-blue-700
+                text-white
+                font-semibold
+                py-3
+                rounded-lg
+                transition-all
+                duration-200
+                "
             >
               Predict Sales
             </button>
@@ -186,7 +203,15 @@ function PredictionForm({ onPrediction }) {
                 reset();
                 onPrediction(null);
               }}
-              className="bg-gray-200 hover:bg-gray-300 px-6 rounded-lg"
+              className="
+                px-6
+                rounded-lg
+                border
+                border-blue-500
+                text-blue-300
+                hover:bg-blue-700
+                transition
+                "
             >
               Reset
             </button>
