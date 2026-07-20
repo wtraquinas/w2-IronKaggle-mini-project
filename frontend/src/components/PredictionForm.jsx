@@ -47,13 +47,13 @@ function PredictionForm({ onPrediction }) {
   };
 
     const inputClass =
-        "w-full p-3 rounded-lg border border-slate-600 bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500";
+        "w-full p-3 rounded-lg border border-slate-600 dark:bg-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500";
 
     const labelClass =
         "block font-semibold mb-2 text-gray-200";
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg p-8">
+    <div className="bg-slate-100 dark:bg-slate-900 transition-colors duration-300">
 
       <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -178,8 +178,8 @@ function PredictionForm({ onPrediction }) {
         {loading ? (
           <LoadingSpinner />
         ) : (
-          <div className="flex gap-4">
-
+          <div className="flex gap-4 mt-8">
+               
             <button
               type="submit"
               className="
