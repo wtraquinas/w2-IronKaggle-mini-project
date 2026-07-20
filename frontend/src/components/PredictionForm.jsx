@@ -47,19 +47,19 @@ function PredictionForm({ onPrediction }) {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
+    <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-8">
 
       <form onSubmit={handleSubmit(onSubmit)}>
 
         {/* Store ID */}
 
-        <label className="block font-semibold mb-2">
+        <label className="block font-semibold mb-2 text-gray-800 dark:text-gray-200">
           Store ID
         </label>
 
         <input
           type="number"
-          className="w-full border rounded-lg p-3 mb-4"
+          className="w-full border rounded-lg p-3 bg-white dark:bg-slate-700 dark:text-white dark:border-slate-600"
           {...register("store_ID", { required: true })}
         />
 

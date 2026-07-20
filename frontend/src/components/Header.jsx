@@ -1,6 +1,6 @@
-import { Store } from "lucide-react";
+import { Moon, Sun, Store } from "lucide-react";
 
-function Header() {
+function Header({ darkMode, setDarkMode }) {
   return (
     <header className="bg-blue-700 text-white shadow-lg">
       <div className="max-w-4xl mx-auto py-8 px-6 flex items-center gap-4">
@@ -17,6 +17,13 @@ function Header() {
           <p className="text-blue-100 mt-1">
             Predict daily retail sales using Machine Learning
           </p>
+
+            <button
+                onClick={() => setDarkMode((prev) => !prev)}
+                className="bg-white/20 hover:bg-white/30 p-2 rounded-lg transition"
+            >
+                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
 
         </div>
 
