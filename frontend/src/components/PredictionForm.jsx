@@ -82,8 +82,8 @@ function PredictionForm({ onPrediction }) {
         </label>
 
         <select
-          className={inputClass}
           className={`${inputClass} appearance-none`}
+          {...register("day_of_week", { required: true })}
         >
           <option value={1}>Monday</option>
           <option value={2}>Tuesday</option>
