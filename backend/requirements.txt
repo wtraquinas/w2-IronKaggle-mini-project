@@ -43,29 +43,28 @@ opt_einsum==3.4.0
 optree==0.19.1
 packaging==26.0
 pandas
-panel @ file:///C:/Users/task_178095557831943/croot/panel_1780955836891/work
-panel-material-ui @ file:///C:/Users/task_178095045546225/croot/panel-material-ui_1780950749344/work
-param @ file:///C:/Users/task_177399615059762/croot/param_1773996240187/work
-pillow @ file:///C:/b/abs_b50vowcrzo/croot/pillow_1738010273782/work
+panel
+panel-material-ui
+pillow
 plotly==6.8.0
 protobuf==7.35.1
-psutil @ file:///D:/bld/bld/rattler-build_psutil_1769678176/work
-pycparser @ file:///C:/Users/task_177495971170849/croot/pycparser_1774959815978/work
+psutil
+pycparser
 pydantic==2.13.4
 pydantic_core==2.46.4
 pyparsing==3.3.2
-python-dateutil @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/python-dateutil_1729038406576/work
+python-dateutil==2.8.2
 python-dotenv==1.2.2
 python-slugify==8.0.4
 redlines==0.6.1
 referencing==0.37.0
 regex==2026.6.28
-requests @ file:///C:/Users/task_178034870374817/croot/requests_1780348781782/work
+requests==2.31.0
 rich==15.0.0
 rich-click==1.9.8
 rpds-py==2026.6.3
 scikit-learn==1.9.0
-scipy @ file:///C:/Users/task_178236955481703/croot/scipy_1782369687079/work/dist/scipy-1.18.0-cp313-cp313-win_amd64.whl#sha256=ad377d1900fb996266aa378844e3f0e54153cc25ec5f0d65a0fa622ff896f2f7
+scipy==1.18.0
 setuptools==82.0.1
 smart_open==8.0.0
 sniffio==1.3.1
@@ -75,17 +74,17 @@ tensorflow==2.21.0
 termcolor==3.3.0
 text-unidecode==1.3
 threadpoolctl==3.6.0
-tornado @ file:///D:/bld/tornado_1781006772981/work
-tqdm @ file:///C:/Users/task_178117060982512/croot/tqdm_1781170753556/work
+tornado==5.1.1
+tqdm==4.66.4
 typing-inspection==0.4.2
-typing_extensions @ file:///C:/b/abs_ecq8gc0vbm/croot/typing_extensions_1756281142218/work
-tzdata @ file:///home/task_177806041933677/croot/python-tzdata_1778060738968/work
-uc-micro-py @ file:///C:/Users/task_177798492157864/croot/uc-micro-py_1777985210660/work
-urllib3 @ file:///C:/Users/task_177853590853313/croot/urllib3_1778536214467/work
+typing_extensions==4.12.2
+tzdata==2024.1
+uc-micro-py==1.0.0
+urllib3==1.26.15
 uvicorn==0.51.0
 webencodings==0.5.1
 wheel==0.47.0
 widgetsnbextension==4.0.15
 wrapt==2.2.2
-xgboost @ file:///C:/Users/task_177928958045757/croot/xgboost-split_1779289655585/work/python-package
+xgboost==1.7.3
 
