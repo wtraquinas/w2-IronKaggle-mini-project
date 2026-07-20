@@ -6,6 +6,8 @@ A full-stack Machine Learning web application that predicts daily retail shop sa
 
 <img src="./images/Vercel_React_20260720.jpg" width="450"></img>
 
+<br>
+
 **📚 API Documentation:** https://w2-ironkaggle-mini-project.onrender.com/docs
 
 <img src="./images/Render_APIdocs_20260720.jpg" width="450"></img>
